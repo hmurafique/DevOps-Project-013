@@ -101,4 +101,4 @@ Source (CodeCommit) → Build (CodeBuild) → Deploy (CodeDeploy), CloudWatch Ev
 ```
 
 ## Credits
-Application source adapted from [NotHarshhaa/DevOps-Projects — Project 21](https://github.com/NotHarshhaa/DevOps-Projects/tree/master/DevOps-Project-21). AWS infrastructure designed and implemented end-to-end by Hafiz Muhammad Umar Rafique.
+AWS infrastructure designed and implemented end-to-end by Hafiz Muhammad Umar Rafique.
