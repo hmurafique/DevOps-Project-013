@@ -12,21 +12,21 @@ A fully automated, native AWS CI/CD pipeline that builds and deploys a Netflix C
 ## Architecture
 Developer → CodeCommit (source)
 
-	│
+│
 
-	▼
+▼
 
 CodeBuild (Docker build, reads secrets from SSM Parameter Store)
 
-	│
+│
 
-	▼
+▼
 
 DockerHub (Image Registry)
 
-	│
+│
 
-	▼
+▼
 
 CodeDeploy + EC2 (pulls image, runs container on port 8080)
 All four stages orchestrated by CodePipeline (Source → Build → Deploy)
