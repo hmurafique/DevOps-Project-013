@@ -1,4 +1,4 @@
-# DevOps Project 013
+# DevOps-Project-013
 # Netflix Clone — AWS Native CI/CD Pipeline
 
 ![AWS](https://img.shields.io/badge/AWS-CodePipeline-orange?logo=amazonaws)
@@ -13,16 +13,19 @@ A fully automated, native AWS CI/CD pipeline that builds and deploys a Netflix C
 Developer → CodeCommit (source)
 
 │
+
 ▼
 
 CodeBuild (Docker build, reads secrets from SSM Parameter Store)
 
 │
+
 ▼
 
-DockerHub (image registry)
+DockerHub (Image Registry)
 
 │
+
 ▼
 
 CodeDeploy + EC2 (pulls image, runs container on port 8080)
