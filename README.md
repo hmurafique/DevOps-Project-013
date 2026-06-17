@@ -36,10 +36,10 @@ flowchart TD
 
 ## Tech Stack & Pinned Versions
 
-| Component        | Version                          |
+| Component         | Version                           |
 |-------------------|-----------------------------------|
-| Frontend          | React + TypeScript + Vite 3.2.2  |
-| Build base image  | node:20-alpine                   |
+| Frontend          | React + TypeScript + Vite 3.2.2   |
+| Build base image  | node:20-alpine                    |
 | Runtime image     | nginx:stable-alpine               |
 | Docker (EC2)      | 29.1.3                            |
 | CodeDeploy Agent  | 1.8.1-26                          |
@@ -66,7 +66,9 @@ git clone ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/netflix-clone-ci
 
 ### 3. SSM Parameter Store (SecureString)
 /myapp/docker-credentials/username
+
 /myapp/docker-credentials/password
+
 /myapp/api/key
 
 ### 4. CodeBuild project
