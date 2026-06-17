@@ -1,0 +1,33 @@
+version: 0.2
+
+env:
+  parameter-store:
+    USERNAME: /myapp/docker-credentials/username
+    PASSWORD: /myapp/docker-credentials/password
+    KEY:  /myapp/api/key
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+    commands:
+      - node --version
+      - echo "installed node"
+  pre_build:
+    commands:
+      - npm install
+      - echo "dependencies installed"
+      - echo "$PASSWORD" | docker login -u "$USERNAME" --password-stdin
+  build:
+    commands:
+      - docker build . -t hmurafique93/netflix-clone:latest --build-arg TMDB_V3_API_KEY=$KEY
+  post_build:
+    commands:
+      - echo "build complete, pushing image"
+      - docker push hmurafique93/netflix-clone:latest
+artifacts:
+  files:
+    - '**/*'
+  base-directory: "./"
+  name: build-artifact-name
+  discard-paths: no
